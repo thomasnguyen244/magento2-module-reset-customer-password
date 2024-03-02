@@ -12,7 +12,7 @@ Magento 2 Customer Password, Reset Customer Password in Admin, Send Reset Passwo
 ## Donation
 
 If this project help you reduce time to develop, you can give me a cup of coffee :) 
-[![Buy Me A Coffee](https://raw.githubusercontent.com/thomasnguyen244/resume/update-resume-info/assets/bmc-icon.svg)](https://www.buymeacoffee.com/workwiththomas)
+[![Buy Me A Coffee](https://raw.githubusercontent.com/thomasnguyen244/resume/update-resume-info/assets/buy-me-a-coffee.png)](https://www.buymeacoffee.com/workwiththomas)
 
 ## Main Functionalities
 - Change customer password when edit/add customer in backend
