@@ -27,7 +27,10 @@ class ResetIsSent extends Command
     protected $sendingEmail;
 
     /**
-     * @param Helper $helper
+     * Construct Command.
+     *
+     * @param \Thomas\CustomerPassword\Model\Sending $sendingEmail
+     * @param \Magento\Framework\App\State $state
      */
     public function __construct(
         \Thomas\CustomerPassword\Model\Sending $sendingEmail,

@@ -1,0 +1,7 @@
+<?xml version="1.0" ?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Backend:etc/menu.xsd">
+	<menu>
+        <add id="Thomas::customer_password" title="Customer Password by Thomas" module="Thomas_CustomerPassword" sortOrder="9999" parent="Magento_Backend::system" resource="Thomas_CustomerPassword::customerpassowrd" />
+		<add id="Thomas_CustomerPassword::kiwicommerce_customer_password_log" module="Thomas_CustomerPassword" parent="Thomas::customer_password" resource="Thomas_CustomerPassword::customerpassowrd" sortOrder="10" title="Password Log" action="thomas_customerpassword/passwordlog/index"/>
+	</menu>
+</config>

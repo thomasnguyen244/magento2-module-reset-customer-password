@@ -1,7 +1,15 @@
 <?php
 /**
- * Copyright ©  All rights reserved.
- * See COPYING.txt for license details.
+ * WorkWithThomas
+ *
+ * Do not edit or add to this file if you wish to upgrade to newer versions in the future.
+ * If you wish to customise this module for your needs.
+ * Please contact us https://workwiththomas.com/contact/.
+ *
+ * @category   WorkWithThomas
+ * @package    Thomas_CustomerPassword
+ * @copyright  Copyright (C) 2024 WorkWithThomas,.Jsc (https://workwiththomas.com/)
+ * @license    https://workwiththomas.com/magento2-extension-license/
  */
 
 declare(strict_types=1);
@@ -9,12 +17,8 @@ declare(strict_types=1);
 namespace Thomas\CustomerPassword\Model;
 
 use Magento\Customer\Api\Data\CustomerInterface;
-use Magento\Customer\Model\CustomerRegistry;
 use Magento\Framework\App\ObjectManager;
-use Magento\Framework\Controller\ResultFactory;
-use Magento\Framework\Filesystem\DirectoryList;
 use Magento\Framework\Mail\Template\SenderResolverInterface;
-use Magento\Framework\Reflection\DataObjectProcessor;
 use Thomas\CustomerPassword\Helper\Data;
 
 class Sending
@@ -40,6 +44,11 @@ class Sending
     protected $collectionFactory;
     protected $customerResource;
 
+    /**
+     * @var PasswordManagement
+     */
+    protected $passwordManagement;
+
     public function __construct(
         \Magento\Customer\Model\CustomerFactory $customer,
         \Magento\Customer\Model\ResourceModel\Customer $customerResource,
@@ -55,7 +64,8 @@ class Sending
         \Magento\Framework\View\Result\PageFactory $resultPageFactory,
         \Magento\Customer\Model\ResourceModel\Customer\CollectionFactory $collectionFactory,
         \Psr\Log\LoggerInterface $logger,
-        Data $helperData
+        Data $helperData,
+        PasswordManagement $passwordManagement
     ) {
         $this->resultPageFactory = $resultPageFactory;
         $this->storeManager = $storeManager;
@@ -72,6 +82,7 @@ class Sending
         $this->logger = $logger;
         $this->collectionFactory = $collectionFactory;
         $this->customerResource = $customerResource;
+        $this->passwordManagement = $passwordManagement;
     }
 
     /**
@@ -252,6 +263,8 @@ class Sending
                 ->addTo($customer->getEmail(), $customerName)
                 ->getTransport();
             $transport->sendMessage();
+            $this->passwordManagement->addPasswordChangeLog($customer);
+
             $this->logger->info($customer->getEmail() . ' : Email Send Successfully.');
         } catch (\Exception $e) {
             $this->logger->error($customer->getEmail() . ' : Something went wrong when sending email');

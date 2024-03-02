@@ -8,4 +8,21 @@
 			</argument>
 		</arguments>
 	</type>
+
+    <preference for="Thomas\CustomerPassword\Api\PasswordLogRepositoryInterface" type="Thomas\CustomerPassword\Model\PasswordLogRepository"/>
+	<preference for="Thomas\CustomerPassword\Api\Data\PasswordLogInterface" type="Thomas\CustomerPassword\Model\PasswordLog"/>
+	<preference for="Thomas\CustomerPassword\Api\Data\PasswordLogSearchResultsInterface" type="Magento\Framework\Api\SearchResults"/>
+	<virtualType name="Thomas\CustomerPassword\Model\ResourceModel\PasswordLog\Grid\Collection" type="Magento\Framework\View\Element\UiComponent\DataProvider\SearchResult">
+		<arguments>
+			<argument name="mainTable" xsi:type="string">thomas_customerpassword_passwordlog</argument>
+			<argument name="resourceModel" xsi:type="string">Thomas\CustomerPassword\Model\ResourceModel\PasswordLog\Collection</argument>
+		</arguments>
+	</virtualType>
+	<type name="Magento\Framework\View\Element\UiComponent\DataProvider\CollectionFactory">
+		<arguments>
+			<argument name="collections" xsi:type="array">
+				<item name="thomas_customerpassword_passwordlog_listing_data_source" xsi:type="string">Thomas\CustomerPassword\Model\ResourceModel\PasswordLog\Grid\Collection</item>
+			</argument>
+		</arguments>
+	</type>
 </config>

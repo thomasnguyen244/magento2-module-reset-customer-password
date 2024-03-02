@@ -5,6 +5,7 @@
             <general>
                 <enable>1</enable>
 				<enable_cli>0</enable_cli>
+                <enable_field>1</enable_field>
                 <sender_identity>general</sender_identity>
                 <custom_reset_password>custom_reset_password</custom_reset_password>
             </general>

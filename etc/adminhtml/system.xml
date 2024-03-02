@@ -20,6 +20,11 @@
             		<comment><![CDATA[Enable console command to change customer's password by either id or email <br /><code>customer:password:change [-p|--password="..."] [-i|--customer-id[="..."]] [-e|--customer-email[="..."]]</code> ]]></comment>
 					<source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
 				</field>
+                <field id="enable_field" showInDefault="1" showInStore="1" showInWebsite="1" sortOrder="12" translate="label comment" type="select">
+					<label>Show Password Field In Customer Form</label>
+            		<comment>Show/hide Customer Password Field In Admin Customer Add/Edit Form.</comment>
+					<source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+				</field>
 				<field id="sender_identity" translate="label" type="select" sortOrder="15" showInDefault="1" showInWebsite="1" showInStore="1">
 					<label>Email Sender</label>
 					<source_model>Magento\Config\Model\Config\Source\Email\Identity</source_model>
