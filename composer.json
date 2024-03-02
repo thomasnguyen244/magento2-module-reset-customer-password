@@ -1,5 +1,5 @@
 {
-    "name": "workwiththomas/module-customer-password",
+    "name": "workwiththomas/module-manage-customer-password",
     "description": "Magento 2 send welcome and reset password emails to all customers program",
     "require": {
     },
