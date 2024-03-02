@@ -21,11 +21,11 @@ use Thomas\CustomerPassword\Model\PasswordManagement;
 use Thomas\CustomerPassword\Helper\Data;
 
 /**
- * Class CustomerSaveObserver
+ * Class CustomerSaveAfter
  *
  * @package Thomas\CustomerPassword\Observer\Backend\Model
  */
-class CustomerSaveObserver implements ObserverInterface
+class CustomerSaveAfter implements ObserverInterface
 {
     /**
      * @var PasswordManagement

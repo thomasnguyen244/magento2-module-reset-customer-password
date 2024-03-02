@@ -4,6 +4,6 @@
 		<observer name="ThomasCustomerSavePredicpatch" instance="Thomas\CustomerPassword\Observer\Backend\Controller\ActionPredispatchCustomerIndexSave"/>
 	</event>
 	<event name="adminhtml_customer_save_after">
-		<observer name="ThomasCustomerSaveAfter" instance="Thomas\CustomerPassword\Observer\Backend\Adminhtml\CustomerSaveAfter"/>
+		<observer name="ThomasCustomerSaveAfter" instance="Thomas\CustomerPassword\Observer\Backend\Model\CustomerSaveAfter"/>
 	</event>
 </config>

@@ -5,6 +5,7 @@
 			<argument name="commands" xsi:type="array">
 				<item name="ThomasProcessSendCustomerResetpass" xsi:type="object">Thomas\CustomerPassword\Console\Command\ResetPassword</item>
                 <item name="ThomasProcessResetIsSentCustomer" xsi:type="object">Thomas\CustomerPassword\Console\Command\ResetIsSent</item>
+                <item name="ThomasChangeCustomerPassword" xsi:type="object">Thomas\CustomerPassword\Console\Command\ChangeCustomerPassword</item>
 			</argument>
 		</arguments>
 	</type>
