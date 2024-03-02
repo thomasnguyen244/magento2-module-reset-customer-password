@@ -1,5 +1,5 @@
 # Magento 2 Reset Customer Password - Send Welcome Emails to Customers Programe
-``thomas/module-customer-password``
+``workwiththomas/module-manage-customer-password``
 
 Magento 2 Customer Password, Reset Customer Password in Admin, Send Reset Password Email to Customers
 
@@ -36,7 +36,7 @@ If this project help you reduce time to develop, you can give me a cup of coffee
     - public repository `packagist.org`
     - public github repository as vcs
  - Add the composer repository to the configuration by running `composer config repositories.repo.magento.com composer https://repo.magento.com/`
- - Install the module composer by running `composer require thomas/module-customer-password`
+ - Install the module composer by running `composer require workwiththomas/module-manage-customer-password`
  - enable the module by running `php bin/magento module:enable Thomas_CustomerPassword`
  - apply database updates by running `php bin/magento setup:upgrade --keep-generated`
  - Flush the cache by running `php bin/magento cache:flush`
