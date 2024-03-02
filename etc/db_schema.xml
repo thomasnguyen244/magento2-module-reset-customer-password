@@ -11,4 +11,18 @@
         <column xsi:type="int" name="is_sent" unsigned="true" default="0" nullable="false"
                 comment="Is send email flag?"/>
     </table>
+
+    <table name="thomas_customerpassword_passwordlog" resource="default" engine="innodb" comment="Customer Password Log Table">
+		<column xsi:type="int" name="passwordlog_id" padding="10" unsigned="true" nullable="false" identity="true" comment="Entity Id"/>
+		<constraint xsi:type="primary" referenceId="PRIMARY">
+			<column name="passwordlog_id"/>
+		</constraint>
+		<column name="customer_id" nullable="true" xsi:type="int" comment="Customer id" unsigned="true"/>
+		<column name="customer_email" nullable="true" xsi:type="text" comment="Customer Email"/>
+		<column name="admin_username" nullable="true" xsi:type="text" comment="Admin user name"/>
+		<column name="admin_id" nullable="true" xsi:type="int" comment="Admin user id" unsigned="true"/>
+		<column name="admin_name" nullable="true" xsi:type="text" comment="Admin name"/>
+		<column name="ip" nullable="true" xsi:type="text" comment="Ip Address"/>
+		<column name="logged_at" nullable="true" xsi:type="timestamp" comment="Logged At" default="CURRENT_TIMESTAMP"/>
+	</table>
 </schema>

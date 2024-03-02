@@ -3,6 +3,10 @@
     <acl>
         <resources>
             <resource id="Magento_Backend::admin">
+                <resource id="Thomas_CustomerPassword::customerpassword" title="Thoas - Customer Password" sortOrder="10">
+					<resource id="Thomas_CustomerPassword::delete" title="Delete PasswordLog" sortOrder="20"/>
+					<resource id="Thomas_CustomerPassword::view" title="View PasswordLog" sortOrder="40"/>
+				</resource>
                 <resource id="Magento_Backend::stores">
                     <resource id="Magento_Backend::stores_settings">
                         <resource id="Magento_Config::config">
