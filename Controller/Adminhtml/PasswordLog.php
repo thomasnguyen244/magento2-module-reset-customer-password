@@ -10,7 +10,7 @@ namespace Thomas\CustomerPassword\Controller\Adminhtml;
 abstract class PasswordLog extends \Magento\Backend\App\Action
 {
 
-    const ADMIN_RESOURCE = 'Thomas_CustomerPassword::customerpassowrd';
+    const ADMIN_RESOURCE = 'Thomas_CustomerPassword::customerpassword';
 
     /**
      * @var \Magento\Framework\Registry
@@ -41,6 +41,14 @@ abstract class PasswordLog extends \Magento\Backend\App\Action
             ->addBreadcrumb(__('Thomas'), __('Thomas'))
             ->addBreadcrumb(__('Password log'), __('Password log'));
         return $resultPage;
+    }
+
+    /**
+     * @return bool
+     */
+    public function _isAllowed()
+    {
+        return $this->_authorization->isAllowed(self::ADMIN_RESOURCE);
     }
 }
 

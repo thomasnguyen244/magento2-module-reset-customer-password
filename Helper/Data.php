@@ -21,7 +21,7 @@ use Magento\Framework\App\Helper\AbstractHelper;
 class Data extends AbstractHelper
 {
 
-    const RESOURCE_ID = "Thomas_CustomerPassword::customerpassowrd";
+    const RESOURCE_ID = "Thomas_CustomerPassword::customerpassword";
 
     /**
      *

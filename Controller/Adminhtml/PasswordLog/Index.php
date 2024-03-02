@@ -1,12 +1,26 @@
 <?php
 /**
- * Copyright © workwiththomas.com All rights reserved.
- * See COPYING.txt for license details.
+ * WorkWithThomas
+ *
+ * Do not edit or add to this file if you wish to upgrade to newer versions in the future.
+ * If you wish to customise this module for your needs.
+ * Please contact us https://workwiththomas.com/contact/.
+ *
+ * @category   WorkWithThomas
+ * @package    Thomas_CustomerPassword
+ * @copyright  Copyright (C) 2024 WorkWithThomas,.Jsc (https://workwiththomas.com/)
+ * @license    https://workwiththomas.com/magento2-extension-license/
  */
+
 declare(strict_types=1);
 
 namespace Thomas\CustomerPassword\Controller\Adminhtml\PasswordLog;
 
+/**
+ * Class Index
+ *
+ * @package Thomas\CustomerPassword\Controller\Adminhtml\PasswordLog
+ */
 class Index extends \Magento\Backend\App\Action
 {
 
