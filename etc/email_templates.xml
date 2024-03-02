@@ -1,0 +1,5 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Email:etc/email_templates.xsd">
+    <template area="frontend" file="customersendemail.html" id="custom_reset_password" label="Thomas: Customer Reset Password" module="Thomas_CustomerPassword" type="html"/>
+    <template area="frontend" file="customersendemail.html" id="thomascustomerpassword_general_custom_reset_password" label="Thomas: Customer Reset Password 2" module="Thomas_CustomerPassword" type="html"/>
+</config>

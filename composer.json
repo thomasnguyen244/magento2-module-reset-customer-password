@@ -1,0 +1,33 @@
+{
+    "name": "thomas/module-customer-password",
+    "description": "Magento 2 send welcome and reset password emails to all customers program",
+    "require": {
+    },
+    "type": "magento2-module",
+    "version": "1.0.0",
+    "keywords": [
+        "thomas nguyen",
+        "workwiththomas",
+        "magento 2 customer reset password email extension"
+      ],
+    "license": [
+        "OSL-3.0",
+        "AFL-3.0"
+    ],
+    "authors": [
+        {
+            "name": "Thomas Nguyen",
+            "email": "thomasnguyen899321@gmail.com",
+            "role": "Magento 2 Customer Password",
+            "homepage": "https://workwiththomas.com"
+        }
+    ],
+    "autoload": {
+        "files": [
+            "registration.php"
+        ],
+        "psr-4": {
+            "Thomas\\CustomerPassword\\": ""
+        }
+    }
+}
